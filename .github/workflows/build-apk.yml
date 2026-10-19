@@ -25,6 +25,11 @@ jobs:
           cp index.html www/index.html
           cp icon-only.png icon-foreground.png icon-background.png assets/
 
+      - name: Use fixed signing key (new builds update over old ones)
+        run: |
+          mkdir -p ~/.android
+          echo "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" | base64 -d > ~/.android/debug.keystore
+
       - name: Install Capacitor
         run: |
           npm init -y
@@ -38,9 +43,99 @@ jobs:
         run: |
           echo '{"appId":"com.selfm.app","appName":"SelfM","webDir":"www","server":{"androidScheme":"https"}}' > capacitor.config.json
           npx cap add android
-          sed -i 's#<application#<uses-permission android:name="android.permission.CAMERA" />\n    <application#' android/app/src/main/AndroidManifest.xml
+          sed -i 's#<application#<uses-permission android:name="android.permission.CAMERA" />\n    <uses-permission android:name="android.permission.USE_BIOMETRIC" />\n    <application#' android/app/src/main/AndroidManifest.xml
           npx capacitor-assets generate --android
           npx cap sync android
+
+      - name: Add fingerprint plugin
+        run: |
+          D=android/app/src/main/java/com/selfm/app
+          mkdir -p $D
+          cat > $D/SelfMBiometricPlugin.java <<'EOF_PLUGIN'
+          package com.selfm.app;
+
+          import androidx.biometric.BiometricManager;
+          import androidx.biometric.BiometricPrompt;
+          import androidx.core.content.ContextCompat;
+          import androidx.fragment.app.FragmentActivity;
+          import com.getcapacitor.JSObject;
+          import com.getcapacitor.Plugin;
+          import com.getcapacitor.PluginCall;
+          import com.getcapacitor.PluginMethod;
+          import com.getcapacitor.annotation.CapacitorPlugin;
+
+          @CapacitorPlugin(name = "SelfMBiometric")
+          public class SelfMBiometricPlugin extends Plugin {
+
+              @PluginMethod
+              public void isAvailable(PluginCall call) {
+                  int r = BiometricManager.from(getContext())
+                      .canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_WEAK);
+                  JSObject o = new JSObject();
+                  o.put("available", r == BiometricManager.BIOMETRIC_SUCCESS);
+                  call.resolve(o);
+              }
+
+              @PluginMethod
+              public void authenticate(final PluginCall call) {
+                  final String title = call.getString("title", "Unlock SelfM");
+                  final String subtitle = call.getString("subtitle", "");
+                  final String cancel = call.getString("cancel", "Cancel");
+                  getActivity().runOnUiThread(new Runnable() {
+                      @Override
+                      public void run() {
+                          try {
+                              BiometricPrompt.PromptInfo info = new BiometricPrompt.PromptInfo.Builder()
+                                  .setTitle(title)
+                                  .setSubtitle(subtitle)
+                                  .setNegativeButtonText(cancel)
+                                  .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_WEAK)
+                                  .build();
+                              BiometricPrompt prompt = new BiometricPrompt(
+                                  (FragmentActivity) getActivity(),
+                                  ContextCompat.getMainExecutor(getContext()),
+                                  new BiometricPrompt.AuthenticationCallback() {
+                                      @Override
+                                      public void onAuthenticationSucceeded(BiometricPrompt.AuthenticationResult result) {
+                                          JSObject o = new JSObject();
+                                          o.put("ok", true);
+                                          call.resolve(o);
+                                      }
+
+                                      @Override
+                                      public void onAuthenticationError(int code, CharSequence msg) {
+                                          call.reject(String.valueOf(msg), String.valueOf(code));
+                                      }
+                                  });
+                              prompt.authenticate(info);
+                          } catch (Exception e) {
+                              call.reject(String.valueOf(e.getMessage()));
+                          }
+                      }
+                  });
+              }
+          }
+          EOF_PLUGIN
+          cat > $D/MainActivity.java <<'EOF_MAIN'
+          package com.selfm.app;
+
+          import android.os.Bundle;
+          import com.getcapacitor.BridgeActivity;
+
+          public class MainActivity extends BridgeActivity {
+              @Override
+              public void onCreate(Bundle savedInstanceState) {
+                  registerPlugin(SelfMBiometricPlugin.class);
+                  super.onCreate(savedInstanceState);
+              }
+          }
+          EOF_MAIN
+          cat >> android/app/build.gradle <<'EOF_GRADLE'
+
+          dependencies {
+              implementation "androidx.biometric:biometric:1.1.0"
+          }
+          EOF_GRADLE
 
       - name: Build APK
         working-directory: android
